@@ -316,7 +316,6 @@
 
 @media screen and (max-width: 960px) {
     .work_container {
-        height: 100vh;
         padding: 50px 50px;
     }
 
@@ -343,7 +342,7 @@
 
 .contact_container {
     background: #2c2b2b;
-    height: 90vh;
+    height: 100vh;
     padding: 50px 400px;
     color: #ffff;
     display: flex;
@@ -429,7 +428,6 @@
         justify-self: center;
         width: 100%;
         margin: auto;
-        height: 100vh;
         padding: 25px 50px;
         gap: 50px;
     }
