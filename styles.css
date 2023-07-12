@@ -60,7 +60,7 @@
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
     .navbar_container {
         display: flex;
         justify-content: space-between;
@@ -147,6 +147,10 @@
 }
 
 /* About Me CSS */
+.main {
+    background-color: #2c2b2b;
+}
+
 .main_container {
     display: flex;
     gap: 100px;
@@ -158,6 +162,7 @@
     background-color: #2c2b2b;
     z-index: 1;
     width: 100%;
+    max-width: 4000px;
     padding: 50px 200px;
 }
 
@@ -234,15 +239,16 @@
     width: 700px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1280px) {
     .main_container {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-self: center;
         width: 100%;
+        max-width: 1024px;
         margin: auto;
-        height: 100vh;
+        /* height: 100%; */
         padding: 25px 50px;
         gap: 0;
     }
@@ -266,17 +272,73 @@
     }
 
     #main_img {
-        width: 85%;
+        width: 550px;
         margin: 30px;
     }
 }
 
+@media screen and (max-width: 768px) {
+    .main_container {
+        max-width: 640px;
+    }
+
+    .main_content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main_content h2 {
+        font-size: 1.7rem;
+    }
+
+    .main_content p {
+        font-size: 1.1rem;
+    }
+
+    .main_btn {
+        padding: 10px 25px;
+    }
+
+    #main_img {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .main_container {
+        width: 100%;
+    }
+
+    .main_content h1 {
+        font-size: 2.3rem;
+    }
+
+    .main_content h2 {
+        font-size: 1.5rem;
+    }
+
+    .main_content p {
+        font-size: 1rem;
+    }
+
+    .main_btn {
+        padding: 10px 25px;
+    }
+
+    #main_img {
+        width: 350px;
+    }
+}
+
 /* Working Experience CSS */
+.work_experience {
+    background: #2c2b2b;
+}
+
 .work_container {
     background: #2c2b2b;
     display: grid;
+    align-items: center;
     justify-content: center;
-    height: 100vh;
     color: #ffff;
     width: 100%;
     padding: 50px 200px;
@@ -291,7 +353,7 @@
 .work_container h2 {
     font-size: 2rem;
     color: #F7E840;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -301,10 +363,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 10px;
+}
+
+.job_desc {
+    font-size: 1.25rem;
+    margin-top: 10px;
+    text-align: left;
 }
 
 #year {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #3cd4ae;
 }
 
@@ -314,9 +383,12 @@
     width: 250px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1280px) {
     .work_container {
+        margin: auto;
         padding: 50px 50px;
+        width: 100%;
+        max-width: 1024px;
     }
 
     .work_container h1 {
@@ -327,17 +399,78 @@
         font-size: 1.5rem;
     }
 
-    .work_container h3 {
+    .work_container h3, 
+    .work_container #year {
         font-size: 1.2rem;
     }
 
-    #year {
-        font-size: 1.1rem;
+    .job_desc {
+        font-size: 1.2rem;
     }
 
     #sub_img {
-        width: 40%;
+        width: 250px;
+        margin: 30px auto;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .work_container {
+        max-width: 640px;
+    }
+
+    .work_container h1 {
+        font-size: 2.3rem;
+    }
+
+    .work_container h2 {
+        font-size: 1.5rem;
+    }
+
+    .work_container h3,
+    .work_container #year {
+        font-size: 1.15rem;
+    }
+
+    .job_desc {
+        font-size: 1.15rem;
+    }
+
+    #sub_img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .work_container {
+        width: 100%;
+    }
+
+    .work_container h1 {
+        font-size: 2rem;
+    }
+
+    .work_container h2 {
+        font-size: 1.3rem;
+    }
+
+    .work_container h3,
+    .work_container #year {
+        font-size: 1.1rem;
+    }
+
+    .job_desc {
+        font-size: 1rem;
+    }
+
+    #sub_img {
+        width: 150px;
+    }
+}
+
+/* Contact Section CSS*/
+.contact {
+    background: #2c2b2b;
 }
 
 .contact_container {
@@ -420,33 +553,76 @@
     z-index: -1;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1280px) {
     .contact_container {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-self: center;
         width: 100%;
+        max-width: 1024px;
         margin: auto;
         padding: 25px 50px;
         gap: 50px;
+        /* height: 100%; */
     }
 
     .contact_info h1 {
         font-size: 2.5rem;
     }
 
-    .contact_info h2 {
-        font-size: 1.5rem;
+    .contact_info h2,
+    .contact_info p {
+        font-size: 1.65rem;
     }
-
-    .contact_info p{
-        font-size: 1.5rem;
-    }
-
 
     #contact_img {
-        width: 80%;
-        margin-left: 10%;
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact_container {
+        max-width: 640px;
+    }
+
+    .contact_container h1 {
+        font-size: 2.3rem;
+    }
+
+    .contact_info h2, 
+    .contact_info p {
+        font-size: 1.5rem;
+    }
+
+    #contact_img {
+        width: 400px;
+    }
+
+    .contact_btn {
+        padding: 8px 25px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .contact_container {
+        width: 100%;
+    }
+
+    .contact_container h1 {
+        font-size: 2rem;
+    }
+
+    .contact_info h2, 
+    .contact_info p {
+        font-size: 1.3rem;
+    }
+
+    #contact_img {
+        width: 300px;
+    }
+
+    .contact_btn {
+        padding: 8px 25px;
     }
 }
